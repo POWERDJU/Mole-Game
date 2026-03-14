@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <title>두더지잡기</title>
+  <meta name="description" content="오락실 감성의 두더지잡기 웹앱">
+  <meta name="theme-color" content="#0f0f0f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="app">
+    <section class="hud" aria-label="게임 정보">
+      <div class="hud-item display">
+        <span class="hud-label">LEVEL</span>
+        <span class="hud-value hud-digital" id="levelText">01</span>
+      </div>
+      <div class="hud-item display">
+        <span class="hud-label">SCORE</span>
+        <span class="hud-value hud-digital" id="scoreText">000</span>
+      </div>
+      <div class="hud-item lives">
+        <span class="hud-label">LIFE</span>
+        <div class="life-hearts" id="missText" aria-label="남은 하트 5개">
+          <span class="life-heart on">♥</span>
+          <span class="life-heart on">♥</span>
+          <span class="life-heart on">♥</span>
+          <span class="life-heart on">♥</span>
+          <span class="life-heart on">♥</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="boardWrap" class="board-wrap" aria-label="두더지잡기 게임 보드">
+      <div id="playArea" class="play-area">
+        <img id="machineImage" class="machine" src="level1.png" alt="두더지잡기 게임기">
+        <div id="holesZone" class="holes-zone"></div>
+        <div id="fxLayer" class="fx-layer"></div>
+      </div>
+      <div id="status" class="status" aria-live="polite"></div>
+    </section>
+
+    <div id="overlay" class="overlay">
+      <div class="dialog">
+        <div id="overlayHero" class="dialog-hero" aria-hidden="true">
+          <img id="overlayImage" alt="" hidden>
+        </div>
+        <div class="dialog-actions">
+          <button id="restartBtn" type="button">시작하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
+
+
+
+
