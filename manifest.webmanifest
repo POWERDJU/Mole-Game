@@ -1,0 +1,28 @@
+{
+  "name": "\ub450\ub354\uc9c0\uc7a1\uae30",
+  "short_name": "\ub450\ub354\uc9c0\uc7a1\uae30",
+  "description": "\uc624\ub77d\uc2e4 \uac10\uc131\uc758 \ub450\ub354\uc9c0\uc7a1\uae30 \uc6f9\uc571",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0f0f0f",
+  "theme_color": "#0f0f0f",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
