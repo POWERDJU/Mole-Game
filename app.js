@@ -56,8 +56,9 @@
     };
 
     const SCORE_PER_HIT = 5;
-    const PASS_SCORE = 100;
+    const PASS_SCORE = 50;
     const MAX_MISS = 5;
+    const FINAL_LEVEL = 4;
 
     const levelText = document.getElementById("levelText");
     const scoreText = document.getElementById("scoreText");
@@ -111,30 +112,22 @@
 
     function getLevelTurnConfig(currentLevel, levelScore) {
       if (currentLevel === 1) {
-        if (levelScore >= 50) return { intervalMs: 1480, upDurationMs: 1320, upCount: 2, staggerMs: 0 };
-        if (levelScore >= 20) return { intervalMs: 2120, upDurationMs: 1680, upCount: 1, staggerMs: 0 };
-        return { intervalMs: 2480, upDurationMs: 1860, upCount: 1, staggerMs: 0 };
+        if (levelScore >= 30) return { intervalMs: 1960, upDurationMs: 1760, upCount: 2, staggerMs: 0 };
+        return { intervalMs: 2440, upDurationMs: 1940, upCount: 1, staggerMs: 0 };
       }
 
       if (currentLevel === 2) {
-        if (levelScore >= 60) return { intervalMs: 1360, upDurationMs: 1180, upCount: 3, staggerMs: 0 };
-        if (levelScore >= 30) return { intervalMs: 1740, upDurationMs: 1420, upCount: 2, staggerMs: 0 };
-        return { intervalMs: 2140, upDurationMs: 1660, upCount: 1, staggerMs: 0 };
+        if (levelScore >= 30) return { intervalMs: 1780, upDurationMs: 1560, upCount: 2, staggerMs: 0 };
+        return { intervalMs: 2240, upDurationMs: 1840, upCount: 1, staggerMs: 0 };
       }
 
       if (currentLevel === 3) {
-        if (levelScore >= 60) return { intervalMs: 1040, upDurationMs: 960, upCount: 3, staggerMs: 0 };
-        if (levelScore >= 30) return { intervalMs: 1360, upDurationMs: 1160, upCount: 2, staggerMs: 0 };
-        return { intervalMs: 1760, upDurationMs: 1360, upCount: 1, staggerMs: 0 };
+        if (levelScore >= 40) return { intervalMs: 1520, upDurationMs: 1420, upCount: 3, staggerMs: 0 };
+        if (levelScore >= 20) return { intervalMs: 1860, upDurationMs: 1620, upCount: 2, staggerMs: 0 };
+        return { intervalMs: 2280, upDurationMs: 1860, upCount: 1, staggerMs: 0 };
       }
 
-      if (currentLevel === 4) {
-        if (levelScore >= 60) return { intervalMs: 700, upDurationMs: 980, upCount: 3, staggerMs: 170 };
-        if (levelScore >= 30) return { intervalMs: 1180, upDurationMs: 1120, upCount: 3, staggerMs: 220 };
-        return { intervalMs: 1520, upDurationMs: 1220, upCount: 2, staggerMs: 260 };
-      }
-
-      return { intervalMs: 660, upDurationMs: 980, upCount: 2, staggerMs: 170 };
+      return { intervalMs: 1180, upDurationMs: 1740, upCount: 2, staggerMs: 0 };
     }
 
     function showStatus(text, duration = 1100) {
@@ -568,7 +561,7 @@
       running = false;
       clearTimers();
 
-      if (level >= 5) {
+      if (level >= FINAL_LEVEL) {
         endGame(true);
         return;
       }
