@@ -117,14 +117,13 @@
       }
 
       if (currentLevel === 2) {
-        if (levelScore >= 30) return { intervalMs: 1780, upDurationMs: 1560, upCount: 2, staggerMs: 0 };
+        if (levelScore >= 20) return { intervalMs: 1780, upDurationMs: 1560, upCount: 2, staggerMs: 0 };
         return { intervalMs: 2240, upDurationMs: 1840, upCount: 1, staggerMs: 0 };
       }
 
       if (currentLevel === 3) {
-        if (levelScore >= 40) return { intervalMs: 1520, upDurationMs: 1420, upCount: 3, staggerMs: 0 };
-        if (levelScore >= 20) return { intervalMs: 1860, upDurationMs: 1620, upCount: 2, staggerMs: 0 };
-        return { intervalMs: 2280, upDurationMs: 1860, upCount: 1, staggerMs: 0 };
+        if (levelScore >= 20) return { intervalMs: 1520, upDurationMs: 1420, upCount: 3, staggerMs: 0 };
+        return { intervalMs: 1860, upDurationMs: 1620, upCount: 2, staggerMs: 0 };
       }
 
       return { intervalMs: 1180, upDurationMs: 1740, upCount: 2, staggerMs: 0 };
